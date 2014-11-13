@@ -1,0 +1,29 @@
+Please enter a command (o, p, q, r):
+Please enter a question.
+Please enter something that is true for that question.
+Please enter something that is false for that question.
+Please enter a command (o, p, q, r):
+Does it have fur?
+I guess: Squirrel. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+   Is it bigger than a microwave?
+      Horse
+      Squirrel
+   Fish
+Please enter a command (o, p, q, r):
+Does it have fur?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+   Is it bigger than a microwave?
+      Horse
+      Squirrel
+   Does it have tentacles?
+      Octopus
+      Fish
+Please enter a command (o, p, q, r):

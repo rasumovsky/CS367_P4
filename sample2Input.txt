@@ -1,0 +1,178 @@
+o
+r
+Does it have fur?
+Squirrel
+Fish
+p
+y
+n
+Is it bigger than a microwave?
+Horse
+p
+n
+n
+Does it have tentacles?
+Octopus
+p
+n
+n
+n
+Does it have sharp teeth?
+Shark
+p
+y
+y
+n
+Does it have claws?
+Cheetah
+p
+y
+y
+y
+n
+Is it gray?
+Wolf
+p
+n
+n
+n
+n
+Does it have a shell?
+Clam
+p
+n
+n
+n
+y
+n
+Does it have claws?
+Lobster
+p
+y
+n
+n
+Does it have stripes?
+Chipmunk
+p
+y
+n
+n
+n
+Does it have large ears?
+Rabbit
+p
+n
+n
+y
+n
+Is it a mammal?
+Alligator
+p
+y
+n
+n
+n
+n
+Is it a house pet?
+Cat
+p
+n
+n
+n
+n
+n
+Is it an insect?
+Dragonfly
+p
+y
+y
+n
+n
+Is it a mythical creature?
+Unicorn
+p
+n
+n
+y
+n
+n
+Is it a mythical creature?
+Dragon
+p
+n
+n
+n
+n
+n
+n
+Is it usually gray?
+Dolphin
+p
+n
+y
+n
+Does it have six tentacles?
+Squid
+p
+n
+n
+y
+n
+n
+n
+Does it live in the Amazon?
+Piranha
+p
+y
+n
+y
+n
+Is it black and white?
+Skunk
+p
+y
+y
+y
+n
+n
+Does it have stripes?
+Tiger
+p
+y
+y
+y
+n
+n
+n
+Does it have a mane?
+Lion
+p
+y
+y
+n
+n
+n
+Is it normally found on plains and savannahs?
+Antelope
+p
+n
+n
+n
+n
+n
+y
+n
+Does it live on land?
+Rhinoceros
+p
+n
+n
+n
+n
+n
+n
+n
+Does it live on land?
+Lizard
+o
+q

@@ -1,0 +1,17 @@
+r
+Does it have fur?
+Squirrel
+Fish
+p
+y
+n
+Is it bigger than a microwave?
+Horse
+o
+p
+n
+n
+Does it have tentacles?
+Octopus
+o
+q

@@ -1,0 +1,228 @@
+Please enter a command (o, p, q, r):
+Empty Tree
+Please enter a command (o, p, q, r):
+Please enter a question.
+Please enter something that is true for that question.
+Please enter something that is false for that question.
+Please enter a command (o, p, q, r):
+Does it have fur?
+I guess: Squirrel. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+I guess: Horse. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have claws?
+I guess: Cheetah. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Does it have a shell?
+I guess: Clam. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+I guess: Squirrel. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have stripes?
+I guess: Squirrel. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+I guess: Shark. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have stripes?
+Does it have large ears?
+I guess: Squirrel. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Does it have a shell?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have claws?
+I guess: Horse. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Is it a mammal?
+I guess: Shark. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Does it have a shell?
+Is it an insect?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+I guess: Octopus. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Is it a mammal?
+Is it a mythical creature?
+I guess: Shark. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have stripes?
+I guess: Chipmunk. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have claws?
+Is it gray?
+I guess: Cheetah. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have claws?
+Is it gray?
+Does it have stripes?
+I guess: Cheetah. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Is it bigger than a microwave?
+Does it have claws?
+Is it a mythical creature?
+I guess: Horse. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Does it have a shell?
+Is it an insect?
+Is it usually gray?
+I guess: Dolphin. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+Does it have tentacles?
+Does it have sharp teeth?
+Does it have a shell?
+Is it an insect?
+Is it usually gray?
+I guess: Fish. Was I right?
+Darn. Ok, tell me a question that is true for your answer, but false for my guess.
+Thanks! And what were you thinking of?
+Please enter a command (o, p, q, r):
+Does it have fur?
+   Is it bigger than a microwave?
+      Does it have claws?
+         Is it gray?
+            Wolf
+            Does it have stripes?
+               Tiger
+               Does it have a mane?
+                  Lion
+                  Cheetah
+         Is it a mythical creature?
+            Unicorn
+            Is it normally found on plains and savannahs?
+               Antelope
+               Horse
+      Does it have stripes?
+         Is it black and white?
+            Skunk
+            Chipmunk
+         Does it have large ears?
+            Rabbit
+            Is it a house pet?
+               Cat
+               Squirrel
+   Does it have tentacles?
+      Does it have six tentacles?
+         Squid
+         Octopus
+      Does it have sharp teeth?
+         Is it a mammal?
+            Alligator
+            Is it a mythical creature?
+               Dragon
+               Does it live in the Amazon?
+                  Piranha
+                  Shark
+         Does it have a shell?
+            Does it have claws?
+               Lobster
+               Clam
+            Is it an insect?
+               Dragonfly
+               Is it usually gray?
+                  Does it live on land?
+                     Rhinoceros
+                     Dolphin
+                  Does it live on land?
+                     Lizard
+                     Fish
+Please enter a command (o, p, q, r):
