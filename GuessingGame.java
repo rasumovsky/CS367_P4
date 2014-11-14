@@ -23,3 +23,12 @@
 
 import java.util.*;
 import java.io.*;
+
+/**
+ * The GuessingGame class...
+ *
+ * @author Ming Chew
+ * @author Andrew Hard
+ */
+public class GuessingGame{
+}
