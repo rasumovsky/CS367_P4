@@ -31,4 +31,14 @@ import java.io.*;
  * @author Andrew Hard
  */
 public class GuessingGame{
+
+	public static void main(String[] args) throws IllegalBinaryTreeOpException{
+		BinaryTree<String> game = new BinaryTree<String>("Hello");
+		game.start();
+		game.addRightChild("YOLO");
+
+		game.addLeftChild("Muahaha");
+
+		game.print();
+	}
 }
