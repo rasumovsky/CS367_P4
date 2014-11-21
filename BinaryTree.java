@@ -23,103 +23,175 @@
 import java.util.*;
 
 /**
- * The BinaryTree class...
+ * The BinaryTree class stores information to be used by the GuessingGame
+ * program to ask questions and make guesses. Each node that is not a leaf
+ * stores a question, and each leaf node stores a guess. The leaf nodes in the
+ * left subree of a given parent node answer "yes" to the question in the 
+ * parent node. The leaf nodes in the right subtree of a given parent node 
+ * answer "no" to the question in the parent node. 
  *
  * @author Ming Chew
  * @author Andrew Hard
  */
 public class BinaryTree<E> {
-	private BinaryTreenode<E> root; //root of the tree
-	private BinaryTreenode<E> curr; //curr position of the tree
-
-	public BinaryTree(E data){
-		root = new BinaryTreenode<E>(data);
+    
+    private BinaryTreenode<E> root; //root of the tree
+    private BinaryTreenode<E> curr; //curr position of the tree
+    
+    /**
+     * Constructs an empty BinaryTree.
+     * @param data - the data to add at the root of the new tree.
+     */
+    public BinaryTree(E data){
+	root = new BinaryTreenode<E>(data);
+    }
+    
+    
+    /**
+     * Starts the current reference at the root of the tree to begin navigation
+     * of the tree.
+     */
+    public void start(){
+	curr = root;
+    }
+    
+    
+    /**
+     * Returns the data stored in the current node in navigation. Throws an 
+     * IllegalBinaryTreeOpException if there is no current node in navigation.
+     * @throws IllegalBinaryTreeOpException
+     */
+    public E getCurrent() throws IllegalBinaryTreeOpException {
+	if (curr == null) {
+	    throw new IllegalBinaryTreeOpException();
 	}
-
-	public void start(){
-		curr = root;
+	else {
+	    return curr.getData();
 	}
-
-	public E getCurrent() throws IllegalBinaryTreeOpException{
-		if(curr == null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			return curr.getData();
-		}
+    }
+    
+    
+    /**
+     * Moves the current reference to the left child of the current node in 
+     * navigation. Throws an IllegalBinaryTreeOpException if the current node
+     * does not have a right child.
+     * @throws IllegalBinaryTreeOpException
+     */
+    public void goLeft() throws IllegalBinaryTreeOpException {
+	if (curr.getLeft() == null) {
+	    throw new IllegalBinaryTreeOpException();
 	}
-
-	public void goLeft() throws IllegalBinaryTreeOpException{
-		if(curr.getLeft() == null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			curr = curr.getLeft();
-		}
+	else {
+	    curr = curr.getLeft();
 	}
-
-	public void goRight() throws IllegalBinaryTreeOpException{
-		if(curr.getRight() == null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			curr = curr.getRight();
-		}
+    }
+    
+    
+    /**
+     * Moves the current reference to the right child of the current node in
+     * navigation. Throws an IllegalBinaryTreeOpException if the current node
+     * does not have a right child. 
+     * @throws IllegalBinaryTreeOpException
+     */
+    public void goRight() throws IllegalBinaryTreeOpException {
+	if (curr.getRight() == null) {
+	    throw new IllegalBinaryTreeOpException();
 	}
-
-	public boolean isLeaf(){
-		if(curr.getRight() == null && curr.getRight() == null){
-			return true;
-		}
-		else{
-			return false;
-		}
+	else {
+	    curr = curr.getRight();
 	}
-
-	public void changeCurrent(E data) throws IllegalBinaryTreeOpException{
-		if(curr == null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			curr.setData(data);
-		}
+    }
+    
+    
+    /**
+     * Returns true if the current node in navigation is a leaf (i.e. has no
+     * children).
+     */
+    public boolean isLeaf() {
+	if (curr.getRight() == null && curr.getRight() == null) {
+	    return true;
 	}
-
-	public void addRightChild(E data) throws IllegalBinaryTreeOpException{
-		if(curr.getRight() != null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			curr.setRight(data);
-		}
+	else {
+	    return false;
 	}
-
-	public void addLeftChild(E data) throws IllegalBinaryTreeOpException{
-		if(curr.getLeft() != null){
-			throw new IllegalBinaryTreeOpException();
-		}
-		else{
-			curr.setLeft(data);
-		}
+    }
+    
+    
+    /**
+     * Changes the data held by the current node in navigation to the specified 
+     * data.
+     * @param data - the data to enter into the current node.
+     * @throws IllegalBinaryTreeOpException
+     */
+    public void changeCurrent(E data) throws IllegalBinaryTreeOpException {
+	if (curr == null) {
+	    throw new IllegalBinaryTreeOpException();
 	}
-
-	public void print(){
-		if(root != null){
-			this.print(root, 0);
-		}
+	else {
+	    curr.setData(data);
 	}
-
-	private void print(BinaryTreenode<E> root, int space){
-		if(root != null){
-			if(space == 0){
-				System.out.println(root.getData());
-			}
-			else{
-				System.out.printf("%" + space + "s" + root.getData() + "\n", "");
-			}
-			print(root.getLeft(), space+3);
-			print(root.getRight(), space+3);
-		}
+    }
+    
+    
+    /**
+     * Adds a node with the specified child as the right child of the current
+     * node in navigation. Throws an IllegalBinaryTreeOpException if the 
+     * current node already has a right child.
+     * @param data - the data to add as the specified child.
+     * @throws IllegalBinaryTreeOpException 
+     */
+    public void addRightChild(E data) throws IllegalBinaryTreeOpException {
+	if (curr.getRight() != null) {
+	    throw new IllegalBinaryTreeOpException();
 	}
-
+	else {
+	    curr.setRight(data);
+	}
+    }
+    
+    
+    /**
+     * Adds a node with the specified child as the left child of the current 
+     * node in navigation. Throws an IllegalBinaryTreeOpException if the 
+     * current node already has a left child. 
+     * @param data - the data to add with the specified child
+     * @throws IllegalBinaryTreeOpException
+     */
+    public void addLeftChild(E data) throws IllegalBinaryTreeOpException {
+	if (curr.getLeft() != null) {
+	    throw new IllegalBinaryTreeOpException();
+	}
+	else {
+	    curr.setLeft(data);
+	}
+    }
+    
+    
+    /**
+     * Pre-order prints the tree, starting at the root. Each additional level 
+     * of the tree is incremented by three spaces.
+     */
+    public void print() {
+	if(root != null) {
+	    this.print(root, 0);
+	}
+    }
+    
+    
+    /**
+     * A companion method for print() to enable an iterative implementation.
+     */
+    private void print(BinaryTreenode<E> root, int space) {
+	if (root != null) {
+	    if (space == 0) {
+		System.out.println(root.getData());
+	    }
+	    else {
+		System.out.printf("%"+space+"s"+root.getData()+"\n", "");
+	    }
+	    print(root.getLeft(), space+3);
+	    print(root.getRight(), space+3);
+	}
+    }
+    
 }

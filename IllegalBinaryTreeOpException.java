@@ -23,7 +23,8 @@
 import java.util.*;
 
 /**
- * The IllegalBinaryTreeOpException class...
+ * The IllegalBinaryTreeOpException class signals that an illegal operation
+ * has been attempted on a binary tree. 
  *
  * @author Ming Chew
  * @author Andrew Hard
