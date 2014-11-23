@@ -31,10 +31,17 @@ import java.util.*;
  */
 public class IllegalBinaryTreeOpException extends Exception {
     
+    /**
+     * Creates an exception with no message.
+     */
     public IllegalBinaryTreeOpException() {
 	super();
     }
     
+    /**
+     * Creates an exception with a specified message.
+     * @param message - the message to accompany the exception.
+     */
     public IllegalBinaryTreeOpException(String message) {
 	super(message);
     }

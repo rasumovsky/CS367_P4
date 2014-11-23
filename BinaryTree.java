@@ -38,11 +38,20 @@ public class BinaryTree<E> {
     private BinaryTreenode<E> root; //root of the tree
     private BinaryTreenode<E> curr; //curr position of the tree
     
+    
     /**
      * Constructs an empty BinaryTree.
+     */
+    public BinaryTree() {
+	root = new BinaryTreenode<E>();
+    }
+    
+    
+    /**
+     * Constructs a BinaryTree with data stored in its root.
      * @param data - the data to add at the root of the new tree.
      */
-    public BinaryTree(E data){
+    public BinaryTree(E data) {
 	root = new BinaryTreenode<E>(data);
     }
     
@@ -51,7 +60,7 @@ public class BinaryTree<E> {
      * Starts the current reference at the root of the tree to begin navigation
      * of the tree.
      */
-    public void start(){
+    public void start() {
 	curr = root;
     }
     
@@ -62,9 +71,13 @@ public class BinaryTree<E> {
      * @throws IllegalBinaryTreeOpException
      */
     public E getCurrent() throws IllegalBinaryTreeOpException {
+	
+	// check that current node is defined:
 	if (curr == null) {
-	    throw new IllegalBinaryTreeOpException();
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// return data in current node:
 	else {
 	    return curr.getData();
 	}
@@ -78,9 +91,18 @@ public class BinaryTree<E> {
      * @throws IllegalBinaryTreeOpException
      */
     public void goLeft() throws IllegalBinaryTreeOpException {
-	if (curr.getLeft() == null) {
-	    throw new IllegalBinaryTreeOpException();
+	
+	// check that current node is defined:
+	if (curr == null) {
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// checks that left child exists:
+	if (curr.getLeft() == null) {
+	    throw new IllegalBinaryTreeOpException("left child not defined");
+	}
+	
+	// move current node reference to left child:
 	else {
 	    curr = curr.getLeft();
 	}
@@ -94,9 +116,18 @@ public class BinaryTree<E> {
      * @throws IllegalBinaryTreeOpException
      */
     public void goRight() throws IllegalBinaryTreeOpException {
-	if (curr.getRight() == null) {
-	    throw new IllegalBinaryTreeOpException();
+	
+	// check that current node is defined:
+	if (curr == null ) {
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// checks that right child exists:
+	if (curr.getRight() == null) {
+	    throw new IllegalBinaryTreeOpException("right child not defined");
+	}
+	
+	// move current node reference to right child:
 	else {
 	    curr = curr.getRight();
 	}
@@ -107,10 +138,19 @@ public class BinaryTree<E> {
      * Returns true if the current node in navigation is a leaf (i.e. has no
      * children).
      */
-    public boolean isLeaf() {
+    public boolean isLeaf() throws IllegalBinaryTreeOpException {
+	
+	// check that current node is defined:
+	if (curr == null ) {
+	    throw new IllegalBinaryTreeOpException("current node not defined");
+	}
+	
+	// Return true if there are no left or right children:
 	if (curr.getRight() == null && curr.getRight() == null) {
 	    return true;
 	}
+	
+	// Return false if the node has any children:
 	else {
 	    return false;
 	}
@@ -124,9 +164,13 @@ public class BinaryTree<E> {
      * @throws IllegalBinaryTreeOpException
      */
     public void changeCurrent(E data) throws IllegalBinaryTreeOpException {
+	
+	// check that current node is defined:
 	if (curr == null) {
-	    throw new IllegalBinaryTreeOpException();
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// set data in current node:
 	else {
 	    curr.setData(data);
 	}
@@ -141,9 +185,18 @@ public class BinaryTree<E> {
      * @throws IllegalBinaryTreeOpException 
      */
     public void addRightChild(E data) throws IllegalBinaryTreeOpException {
-	if (curr.getRight() != null) {
-	    throw new IllegalBinaryTreeOpException();
+	
+	// check that current node is defined:
+	if (curr == null) {
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// check that right child is not already defined:
+	if (curr.getRight() != null) {
+	    throw new IllegalBinaryTreeOpException("right child defined");
+	}
+	
+	// add data to right child node:
 	else {
 	    curr.setRight(data);
 	}
@@ -157,10 +210,19 @@ public class BinaryTree<E> {
      * @param data - the data to add with the specified child
      * @throws IllegalBinaryTreeOpException
      */
-    public void addLeftChild(E data) throws IllegalBinaryTreeOpException {
-	if (curr.getLeft() != null) {
-	    throw new IllegalBinaryTreeOpException();
+     public void addLeftChild(E data) throws IllegalBinaryTreeOpException {
+	
+	// check that current node is defined:
+	if (curr == null) { 
+	    throw new IllegalBinaryTreeOpException("current node not defined");
 	}
+	
+	// check that left child is not already defined:
+	if (curr.getLeft() != null) {
+	    throw new IllegalBinaryTreeOpExeption("left child defined");
+	} 
+	
+	// add data to left child node:
 	else {
 	    curr.setLeft(data);
 	}
@@ -172,7 +234,9 @@ public class BinaryTree<E> {
      * of the tree is incremented by three spaces.
      */
     public void print() {
-	if(root != null) {
+	
+	// check root exists before calling recursive companion print method
+	if (root != null) {
 	    this.print(root, 0);
 	}
     }
@@ -182,13 +246,21 @@ public class BinaryTree<E> {
      * A companion method for print() to enable an iterative implementation.
      */
     private void print(BinaryTreenode<E> root, int space) {
+	
+	// implicit base case: check root exists.
 	if (root != null) {
+	    
+	    // for first level, print indentation of zero:
 	    if (space == 0) {
 		System.out.println(root.getData());
 	    }
+	    
+	    // for other levels, add print spacing:
 	    else {
 		System.out.printf("%"+space+"s"+root.getData()+"\n", "");
 	    }
+	    
+	    // recursive calls to print left and right child nodes:
 	    print(root.getLeft(), space+3);
 	    print(root.getRight(), space+3);
 	}
