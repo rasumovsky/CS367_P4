@@ -219,7 +219,7 @@ public class BinaryTree<E> {
 	
 	// check that left child is not already defined:
 	if (curr.getLeft() != null) {
-	    throw new IllegalBinaryTreeOpExeption("left child defined");
+	    throw new IllegalBinaryTreeOpException("left child defined");
 	} 
 	
 	// add data to left child node:
