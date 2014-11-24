@@ -36,19 +36,23 @@ import java.io.*;
  */
 public class GuessingGame {
     
+    // The data structure storing questions and guesses:
+    private static BinaryTree<String> root;
+    
     /**
      * reset is a method for resetting the game. It starts with a completely
      * empty tree and then prompts the user for a new root for the tree.
      * @param scanner - the input method (user console input or file).
-     * @returns a new BinaryTree with which the game can restart.
      * @throws IllegalBinaryTreeOpException.
      */
-    public static BinaryTree<String> reset(Scanner in) 
+    //public static BinaryTree<String> reset(Scanner in) 
+    public static void reset(Scanner in) 
 	throws IllegalBinaryTreeOpException {
 		
 	// Create a new tree root using the question given by user:
 	System.out.println("Please enter a question.");
-	BinaryTree<String> root = new BinaryTree<String>(in.nextLine());
+	//BinaryTree<String> root = new BinaryTree<String>(in.nextLine());
+	root = new BinaryTree<String>(in.nextLine());
 	root.start();//start navigation of tree by setting current node to root
 	
 	// Add true answer for the left child:
@@ -62,17 +66,17 @@ public class GuessingGame {
 	root.addRightChild(in.nextLine());
 	
 	// return the root of the new BinaryTree.
-	return root;
+	//return root;
     }
     
     
     /**
      * play is a method for plaing the game with the program, based on inputs. 
      * @param in - the Scanner input from the user or from an input game file.
-     * @param root - the BinaryTree storing game data.
      * @throws IllegalBinaryTreeOptException.
      */
-    public static void play(Scanner in, BinaryTree<String> root) 
+    //public static void play(Scanner in, BinaryTree<String> root) 
+    public static void play(Scanner in) 
 	throws IllegalBinaryTreeOpException {
 	
 	String command;
@@ -126,14 +130,13 @@ public class GuessingGame {
      * The checkOptions method parses input either from a file or console to 
      * determine which actions the program should take. It is called by the 
      * main method and is implemented to reduce code redundancy.
-     * @param root - the BinaryTree storing game data.
      * @param input - the Scanner used to input commands.
      * @param command - the current command to parse.
      * @returns true if the user chooses to quit, or if input file ends.
      * @throws IllegalBinaryTreeOpException.
      */
-    public static boolean checkOptions(BinaryTree<String> root, Scanner input, 
-				       String command)
+    //public static boolean checkOptions(BinaryTree<String> root, Scanner input, 
+    public static boolean checkOptions(Scanner input, String command)
 	throws IllegalBinaryTreeOpException {
 	// true if user chooses to quit
 	boolean result = false;
@@ -152,18 +155,21 @@ public class GuessingGame {
 	    
 	case "p" :// play the game.
 	    if (root == null) {
-		root = reset(input);
+		//root = reset(input);
+		reset(input);
 	    }
-	    play(input, root);
+	    //play(input, root);
+	    play(input);
 	    break;
 	    
 	case "q" :// quit loading data for the game.
-	    input.close();
+	    //input.close();
 	    result = true;
 	    break;
 	    
 	case "r" :// reset the game (new tree etc.).
-	    root = reset(input);
+	    //root = reset(input);
+	    reset(input);
 	    break;
 	    
 	default:// move on to next line.
@@ -182,7 +188,8 @@ public class GuessingGame {
      */
     public static void main(String[] args) throws IllegalBinaryTreeOpException {
 	
-	BinaryTree<String> root = null;//tree storing questions and guesses
+	//BinaryTree<String> root = null;//tree storing questions and guesses
+	root = null;//tree storing questions and guesses
 	File gameFile;//file with game data to import
 	String command;//variable assigned to inputs
 	
@@ -212,10 +219,11 @@ public class GuessingGame {
 			command = fileInput.nextLine();
 			
 			// call a method that checks command options:
-			doneLoading = checkOptions(root, fileInput, command);
+			//doneLoading = checkOptions(root, fileInput, command);
+			doneLoading = checkOptions(fileInput, command);
 			
 		    }
-		    //fileInput.close();// already done in checkOptions();
+		    fileInput.close();// already done in checkOptions();
 		}
 		
 		// If input file not found, move on to console input:
@@ -237,7 +245,9 @@ public class GuessingGame {
 	    command = userInput.nextLine();
 	    
 	    // call a method that checks command options:
-	    donePlaying = checkOptions(root, userInput, command);
+	    //donePlaying = checkOptions(root, userInput, command);
+	    donePlaying = checkOptions(userInput, command);
 	}
+	userInput.close();
     }
 }
