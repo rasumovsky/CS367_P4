@@ -50,9 +50,16 @@ public class BinaryTree<E> {
     /**
      * Constructs a BinaryTree with data stored in its root.
      * @param data - the data to add at the root of the new tree.
+     * @throws IllegalArgumentException
      */
-    public BinaryTree(E data) {
-	root = new BinaryTreenode<E>(data);
+    public BinaryTree(E data) throws IllegalArgumentException{
+    
+    if(data == null){
+    	throw new IllegalArgumentException("null data");
+    }
+    else{
+		root = new BinaryTreenode<E>(data);
+	}
     }
     
     
@@ -161,9 +168,10 @@ public class BinaryTree<E> {
      * Changes the data held by the current node in navigation to the specified 
      * data.
      * @param data - the data to enter into the current node.
-     * @throws IllegalBinaryTreeOpException
+     * @throws IllegalBinaryTreeOpException, IllegalArgumentException
      */
-    public void changeCurrent(E data) throws IllegalBinaryTreeOpException {
+    public void changeCurrent(E data) throws IllegalBinaryTreeOpException,
+    IllegalArgumentException {
 	
 	// check that current node is defined:
 	if (curr == null) {
@@ -172,7 +180,12 @@ public class BinaryTree<E> {
 	
 	// set data in current node:
 	else {
-	    curr.setData(data);
+		if(data == null){
+			throw new IllegalArgumentException("null data");
+		}
+		else{
+	    	curr.setData(data);
+	    }
 	}
     }
     
@@ -182,9 +195,10 @@ public class BinaryTree<E> {
      * node in navigation. Throws an IllegalBinaryTreeOpException if the 
      * current node already has a right child.
      * @param data - the data to add as the specified child.
-     * @throws IllegalBinaryTreeOpException 
+     * @throws IllegalBinaryTreeOpException, IllegalArgumentException 
      */
-    public void addRightChild(E data) throws IllegalBinaryTreeOpException {
+    public void addRightChild(E data) throws IllegalBinaryTreeOpException,
+    IllegalArgumentException {
 	
 	// check that current node is defined:
 	if (curr == null) {
@@ -198,7 +212,12 @@ public class BinaryTree<E> {
 	
 	// add data to right child node:
 	else {
-	    curr.setRight(data);
+		if(data == null){
+			throw new IllegalArgumentException("null data");
+		}
+		else{
+	    	curr.setRight(data);
+	    }
 	}
     }
     
@@ -208,9 +227,10 @@ public class BinaryTree<E> {
      * node in navigation. Throws an IllegalBinaryTreeOpException if the 
      * current node already has a left child. 
      * @param data - the data to add with the specified child
-     * @throws IllegalBinaryTreeOpException
+     * @throws IllegalBinaryTreeOpException, IllegalArgumentException
      */
-     public void addLeftChild(E data) throws IllegalBinaryTreeOpException {
+     public void addLeftChild(E data) throws IllegalBinaryTreeOpException,
+     IllegalArgumentException {
 	
 	// check that current node is defined:
 	if (curr == null) { 
@@ -224,7 +244,12 @@ public class BinaryTree<E> {
 	
 	// add data to left child node:
 	else {
-	    curr.setLeft(data);
+		if(data == null){
+			throw new IllegalArgumentException("null data");
+		}
+		else{
+	    	curr.setLeft(data);
+	    }
 	}
     }
     
@@ -244,6 +269,8 @@ public class BinaryTree<E> {
     
     /**
      * A companion method for print() to enable an iterative implementation.
+     * @param root - binarytreenode that is being processed
+     * @param space - the spacing for the indentation
      */
     private void print(BinaryTreenode<E> root, int space) {
 	
@@ -261,6 +288,7 @@ public class BinaryTree<E> {
 	    }
 	    
 	    // recursive calls to print left and right child nodes:
+	    // space increase by 3 to create the
 	    print(root.getLeft(), space+3);
 	    print(root.getRight(), space+3);
 	}

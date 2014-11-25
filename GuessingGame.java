@@ -43,11 +43,12 @@ public class GuessingGame {
      * reset is a method for resetting the game. It starts with a completely
      * empty tree and then prompts the user for a new root for the tree.
      * @param scanner - the input method (user console input or file).
-     * @throws IllegalBinaryTreeOpException.
+     * @throws IllegalBinaryTreeOpException, IllegalArgumentException
      */
     //public static BinaryTree<String> reset(Scanner in) 
     public static void reset(Scanner in) 
-	throws IllegalBinaryTreeOpException {
+	throws IllegalBinaryTreeOpException,
+	IllegalArgumentException {
 		
 	// Create a new tree root using the question given by user:
 	System.out.println("Please enter a question.");
@@ -73,12 +74,13 @@ public class GuessingGame {
     /**
      * play is a method for plaing the game with the program, based on inputs. 
      * @param in - the Scanner input from the user or from an input game file.
-     * @throws IllegalBinaryTreeOptException.
+     * @throws IllegalBinaryTreeOptException, IllegalArgumentException
      */
     //public static void play(Scanner in, BinaryTree<String> root) 
     public static void play(Scanner in) 
-	throws IllegalBinaryTreeOpException {
+	throws IllegalBinaryTreeOpException, IllegalArgumentException {
 	
+	// Reset the root
 	String command;
 	root.start();
 	
@@ -165,6 +167,7 @@ public class GuessingGame {
 	case "q" :// quit loading data for the game.
 	    //input.close();
 	    result = true;
+	    System.exit(0);
 	    break;
 	    
 	case "r" :// reset the game (new tree etc.).
@@ -186,7 +189,8 @@ public class GuessingGame {
      * play the guessing game.
      * @param args - an optional input file with game data.
      */
-    public static void main(String[] args) throws IllegalBinaryTreeOpException {
+    public static void main(String[] args) throws IllegalBinaryTreeOpException,
+    IllegalArgumentException {
 	
 	//BinaryTree<String> root = null;//tree storing questions and guesses
 	root = null;//tree storing questions and guesses
