@@ -52,7 +52,6 @@ public class GuessingGame {
 		
 	// Create a new tree root using the question given by user:
 	System.out.println("Please enter a question.");
-	//BinaryTree<String> root = new BinaryTree<String>(in.nextLine());
 	root = new BinaryTree<String>(in.nextLine());
 	root.start();//start navigation of tree by setting current node to root
 	
@@ -65,9 +64,6 @@ public class GuessingGame {
 	System.out
 	    .println("Please enter something that is false for that question.");
 	root.addRightChild(in.nextLine());
-	
-	// return the root of the new BinaryTree.
-	//return root;
     }
     
     
@@ -137,9 +133,9 @@ public class GuessingGame {
      * @returns true if the user chooses to quit, or if input file ends.
      * @throws IllegalBinaryTreeOpException.
      */
-    //public static boolean checkOptions(BinaryTree<String> root, Scanner input, 
     public static boolean checkOptions(Scanner input, String command)
 	throws IllegalBinaryTreeOpException {
+	
 	// true if user chooses to quit
 	boolean result = false;
 	
@@ -157,21 +153,17 @@ public class GuessingGame {
 	    
 	case "p" :// play the game.
 	    if (root == null) {
-		//root = reset(input);
 		reset(input);
 	    }
-	    //play(input, root);
 	    play(input);
 	    break;
 	    
 	case "q" :// quit loading data for the game.
-	    //input.close();
 	    result = true;
 	    System.exit(0);
 	    break;
 	    
 	case "r" :// reset the game (new tree etc.).
-	    //root = reset(input);
 	    reset(input);
 	    break;
 	    
@@ -189,10 +181,8 @@ public class GuessingGame {
      * play the guessing game.
      * @param args - an optional input file with game data.
      */
-    public static void main(String[] args) throws IllegalBinaryTreeOpException,
-    IllegalArgumentException {
-	
-	//BinaryTree<String> root = null;//tree storing questions and guesses
+    public static void main(String[] args) {
+
 	root = null;//tree storing questions and guesses
 	File gameFile;//file with game data to import
 	String command;//variable assigned to inputs
@@ -223,11 +213,17 @@ public class GuessingGame {
 			command = fileInput.nextLine();
 			
 			// call a method that checks command options:
-			//doneLoading = checkOptions(root, fileInput, command);
-			doneLoading = checkOptions(fileInput, command);
-			
+			try {
+			    doneLoading = checkOptions(fileInput, command);
+			} 
+			catch (IllegalArgumentException iae) {
+			    // catch but allow further game play
+			}
+			catch (IllegalBinaryTreeOpException ibtoe) {
+			    // catch but allow further game play
+			}
 		    }
-		    fileInput.close();// already done in checkOptions();
+		    fileInput.close();
 		}
 		
 		// If input file not found, move on to console input:
@@ -249,8 +245,16 @@ public class GuessingGame {
 	    command = userInput.nextLine();
 	    
 	    // call a method that checks command options:
-	    //donePlaying = checkOptions(root, userInput, command);
-	    donePlaying = checkOptions(userInput, command);
+	    try {
+		donePlaying = checkOptions(userInput, command);
+	    }
+	    catch (IllegalArgumentException iae) {
+		// catch but allow further game play
+	    } 
+	    catch (IllegalBinaryTreeOpException ibtoe) {
+		// catch but allow further game play
+	    }
+	    
 	}
 	userInput.close();
     }
